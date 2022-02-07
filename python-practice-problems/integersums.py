@@ -10,7 +10,16 @@ import unittest
 
 def add_it_up(n):
     # TODO: Your code goes here!
-    return n
+
+    # if not int return 0
+    if not isinstance(n, int):
+        return 0
+
+    res = sum(range(n + 1))
+
+    print(f'{n} : {res}')
+
+    return res
 
 
 class IntegerSumTestCase(unittest.TestCase):
